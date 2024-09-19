@@ -3,7 +3,9 @@ const tasks=['Learn react','Practice coding','Build Projects']
 const handleTasks = ()=>{
     console.log(tasks)
 }
-
+const handleClick =(task)=>{
+  console.log(`You clicked on ${task}`)
+}
 
 
 const TaskList = () => {
@@ -15,7 +17,8 @@ const TaskList = () => {
         {
             tasks.map((task,index)=>(
                <li key={index}>  {task}
-               <button onClick={handleClick(task)}>Click me</button>               </li>
+               <button onClick={()=>handleClick(task)}>Click me</button>        
+                 </li>
               
             
             ))
